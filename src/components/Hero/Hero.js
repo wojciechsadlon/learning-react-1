@@ -3,10 +3,10 @@ import styles from './Hero.scss';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 
-const Hero = props => (
+const Hero = ({titleText, image, ...props}) => (
     <header className={styles.component}>
-        <h2 className={styles.title}>{ReactHtmlParser(props.titleText)}</h2>
-        <img className={styles.image} src={props.image} alt={props.imageAlt} />
+        <h2 className={styles.title}>{ReactHtmlParser(titleText)}</h2>
+        <img className={styles.image} src={image} alt={props.imageAlt} />
     </header>
 );
 

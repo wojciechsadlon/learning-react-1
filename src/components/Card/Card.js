@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 
 class Card extends React.Component {
+  static propTypes = {
+    title: PropTypes.string,
+  }
   render() {
     return (
       <div className={styles.component}>{this.props.title}</div>
