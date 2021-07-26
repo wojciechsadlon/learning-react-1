@@ -1,3 +1,5 @@
+import initialStoreData from '../data/dataStore';
+
 // selectors
 export const getSearchString = ({searchString}) => searchString;
 export const countAllCards = ({cards}) => cards.length;
@@ -12,13 +14,13 @@ const createActionName = name => `app/${reducerName}/${name}`;
 export const CHANGE = createActionName('CHANGE');
 
 // action creators
-export const createActionChangeSearchString = payload => ({ payload, type: CHANGE });
+export const changeSearchString = payload => ({ payload, type: CHANGE });
 
 // reducer
-export default function reducer(statePart = '', action = {}) {
+export default function reducer(statePart = initialStoreData.searchString, action = {}) {
   switch (action.type) {
     case CHANGE:
-      return [action.payload];
+      return action.payload;
     default:
       return statePart;
   }

@@ -25,7 +25,7 @@ class Search extends React.Component {
   handleChange(event) {
     this.setState({
       value: event.target.value,
-      visibleButtons: event.target.value.length > 0,
+      visibleButtons: !!event.target.value.length,
     });
   }
 
@@ -34,7 +34,7 @@ class Search extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if(this.props.searchString != prevProps.searchString){
+    if(this.props.searchString !== prevProps.searchString){
       this.setState({value: this.props.searchString});
     }
   }

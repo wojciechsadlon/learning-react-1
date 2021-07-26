@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 class App extends React.Component {
   static propTypes = {
     image: PropTypes.string,
+    searchString: PropTypes.string,
     title: PropTypes.node,
     subtitle: PropTypes.node,
     lists: PropTypes.array,
