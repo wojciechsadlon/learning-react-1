@@ -146,6 +146,7 @@ const initialStoreData = {
   lists: [...lists],
   columns: [...columns],
   cards: [...cards],
+  searchString: '',
 };
 
 export default initialStoreData;
