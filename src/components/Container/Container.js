@@ -9,11 +9,8 @@ const Container = ({children}) => (
 );
 
 Container.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 };
 
-Container.defaultProps = {
-  children: '<p>error passing node</p>',
-};
 
 export default Container;
