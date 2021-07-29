@@ -13,13 +13,14 @@ class List extends React.Component {
     description: PropTypes.node,
     columns: PropTypes.array,
     image: PropTypes.string,
+    searchString: PropTypes.string,
     addColumn: PropTypes.func,
   }
   static defaultProps = {
     description: settings.defaultListDescription,
   } 
   render() {
-    const {title, image, description, columns, addColumn} = this.props;
+    const {searchString, title, image, description, columns, addColumn} = this.props;
     return (
       <section className={styles.component}>
         <Hero titleText={title} image={image}/>
@@ -27,9 +28,10 @@ class List extends React.Component {
           {ReactHtmlParser(description)}
         </div>
         <div className={styles.columns}>
-          {columns.map(columnData => (
-            <Column key={columnData.id} {...columnData} />
-          ))}
+          {searchString
+            ? <Column title='Search Results' enableAddingCards={false} />
+            : columns.map(columnData => (<Column key={columnData.id} {...columnData} />))
+          }
         </div>
         <div className={styles.creator}>
           <Creator text={settings.columnCreatorText} action={addColumn}/>
