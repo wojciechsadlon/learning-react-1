@@ -1,6 +1,13 @@
 export const settings = {
   columnCreatorText: 'Add new column',
   cardCreatorText: 'Add new card',
+  headerIcon: 'adjust',
+  faqSubtitle: 'FAQ - Frequently Asked Questions',
+  navLinksHeaders: {
+    home: 'Home',
+    faq: 'FAQ',
+    info: 'Info',
+  },
   creator: {
     buttonOK: 'OK',
     buttonCancel: 'Cancel',
@@ -17,6 +24,7 @@ export const settings = {
 export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
+  lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 };
 
 export const listData = {
@@ -143,6 +151,8 @@ const cards = [
 
 const initialStoreData = {
   app: {...pageContents},
+  settings: {...settings},
+  listData: {...listData},
   lists: [...lists],
   columns: [...columns],
   cards: [...cards],

@@ -25,7 +25,7 @@ class List extends React.Component {
     return (
       <Container>
         <section className={styles.component}>
-          <Hero titleText={title} image={image}/>
+          <Hero titleText={title} image={image} />
           <div className={styles.description}>
             {ReactHtmlParser(description)}
           </div>
