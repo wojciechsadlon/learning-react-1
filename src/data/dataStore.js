@@ -3,6 +3,7 @@ export const settings = {
   cardCreatorText: 'Add new card',
   headerIcon: 'adjust',
   faqSubtitle: 'FAQ - Frequently Asked Questions',
+  searchResultsTitle: 'Search results:',
   navLinksHeaders: {
     home: 'Home',
     faq: 'FAQ',
@@ -87,6 +88,18 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'Things to do <sup>after work</sup>',
+    description: 'Interesting things I want to watch!',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  },
+  {
+    id: 'list-3',
+    title: 'Things to do <sup>at weekend</sup>',
+    description: 'Interesting things I want to visit!',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  },
 ];
 
 const columns = [
@@ -111,7 +124,13 @@ const columns = [
   {
     id: 'column-4',
     listId: 'list-2',
-    title: 'Strange column',
+    title: 'Shows',
+    icon: 'question',
+  },
+  {
+    id: 'column-5',
+    listId: 'list-3',
+    title: 'Places',
     icon: 'question',
   },
 ];
@@ -156,7 +175,6 @@ const initialStoreData = {
   lists: [...lists],
   columns: [...columns],
   cards: [...cards],
-  searchString: '',
 };
 
 export default initialStoreData;
