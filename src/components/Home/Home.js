@@ -6,14 +6,9 @@ import PropTypes from 'prop-types';
 
 class Home extends React.Component {
   static propTypes = {
-    image: PropTypes.string,
-    searchString: PropTypes.string,
-    title: PropTypes.node,
-    subtitle: PropTypes.node,
-    lists: PropTypes.array,
-  }
-  static defaultProps = {
-    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+    title: PropTypes.node.isRequired,
+    subtitle: PropTypes.node.isRequired,
+    lists: PropTypes.array.isRequired,
   }
   render() {
     const {title, subtitle, lists} = this.props;
