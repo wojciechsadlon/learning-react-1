@@ -8,7 +8,7 @@ import Container from '../Container/Container';
 import { withRouter} from 'react-router-dom';
 
 class Search extends React.Component {
-  propTypes = {
+  static propTypes = {
     history: PropTypes.array,
   }
 
@@ -25,7 +25,9 @@ class Search extends React.Component {
   }
 
   handleOk() {
-    this.props.history.push(`/search/${this.state.value}`);
+    this.state.value ?
+      this.props.history.push(`/search/${this.state.value}`) :
+      this.props.history.push(`/`);
   }
 
   render() {
